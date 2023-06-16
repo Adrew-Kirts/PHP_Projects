@@ -661,7 +661,34 @@ $rowsThirteen = $questionThirteen->fetchAll(PDO::FETCH_ASSOC);
   </table>
 </div>
 
+<!-- 14 -->
 
-<?php 
 
-?>
+*
+ 14. À partir de votre dernière requête, créez une vue des données correspondante, à quoi cela
+peut-il servir ?
+ */
+
+CREATE VIEW vue_prix_carburant AS
+SELECT adresse, ville, date
+FROM point_de_vente
+         JOIN prix p on point_de_vente.id = p.point_de_vente_id
+         JOIN carburant c on p.carburant_id = c.id
+WHERE p.valeur < (SELECT AVG(valeur)
+                  FROM point_de_vente pdv
+                           JOIN prix p on pdv.id = p.point_de_vente_id
+                           JOIN carburant c on p.carburant_id = c.id
+                  WHERE c.nom = 'Gazole'
+                    AND p.date >= '2023-04-01' AND p.date <= '2023-04-30')
+  AND p.date >= '2023-04-01' AND p.date <= '2023-04-30'
+  AND c.nom = 'SP95';
+
+/*
+La création d'une vue des données correspondante à partir de la dernière requête vous permet de stocker
+et de réutiliser facilement les résultats filtrés dans d'autres requêtes, simplifiant ainsi le processus
+de requête et facilitant l'analyse ultérieure des données.
+*/
+
+SELECT adresse
+FROM vue_prix_carburant
+
