@@ -1,0 +1,253 @@
+/* ---- COLORS ---- */
+:root{
+   --primary: #000;
+   --secondary: #525252;
+   --tertiary: #CF0A0A;
+   --quaternary: #FFD700;
+   --quinary: #FFFFFF;
+}
+/* GENERAL */
+body{
+  min-height: 100vh;
+}
+h1{
+    color:var(--tertiary);
+}
+h5, #sous_titre{
+    color:var(--quaternary);
+}
+
+header, footer{
+  background-color: var(--primary);
+}
+nav{
+  background-color: var(--quaternary);
+}
+.modal h5{
+  color: var(--primary);
+}
+main {
+    background-image: url("../images/background.webp");
+    background-repeat: repeat;
+}
+header, nav, footer, h5{
+    font-family: 'Eater';
+    text-align: center;
+    overflow: hidden;
+}
+/* page index (landing page) */
+#titre_index{
+    position: relative;
+}
+#titre_index img{
+    position: absolute;
+    width: 32%;
+    top: 20%;
+}
+#titre{
+    position: relative;
+}
+#titre img{
+    position: absolute;
+    width: 2em;
+    top: 23%;
+}
+#sous_titre{
+  position: relative;
+}
+#sous_titre img{
+    position: absolute;
+    width: 10em;
+    transform: rotate(100deg);
+    top: -3em;
+    left: 10em;
+    opacity: 70%;
+
+}
+.griffe{
+  position: relative;
+}
+.griffe img{
+  position: absolute;
+  width: 5em;
+  top: -5em;
+}
+#menu{
+    width: 1.8em;
+}
+.navbar-toggler{
+    box-shadow: 0 0 20px 5px var(--secondary) inset ;
+}
+a{
+    text-decoration: none;
+}
+#search input{
+    border-radius: 50px 0 0 50px;
+    width: 200px;
+}
+#search button{
+    border-radius: 0 50px 50px 0;
+}
+#search img{
+    height: 25px;
+}
+#profile_box{
+  background-color: var(--quinary);
+}
+#cat_logo {
+    width: 265px;
+    -webkit-animation: breathing 7s ease-out infinite normal;
+    animation: breathing 7s ease-out infinite normal;
+    -webkit-font-smoothing: antialiased;   
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#carouselExampleCaptions {
+  height: 468px;
+  width: 375px;
+}
+.color-button {
+  color: var(--tertiary);
+}
+.redbox {
+  background-color: RGBA(207,10,10,0.7);
+}
+
+/* angles */ 
+.gen-radius-10px {
+  border-radius: 10px;
+}
+.gen-bot-radius-10px {
+  border-radius: 0 0 10px 10px;
+}
+/* marges externes */
+.m-20px{
+  margin: 20px;
+}
+.m-t-20px {
+  margin-top: 20px;
+}
+.m-b-20px {
+  margin-bottom: 20px;
+}
+.m-t-b-20px {
+  margin: 20px 0;
+}
+.m-10px {
+  margin: 10px
+}
+.m-l-r-10px {
+  margin: 0 10px;
+}
+/* marges internes */
+.p-10 {
+  padding: 10px;
+}
+.p-20px {
+  padding: 20px;
+}
+.p-t-10px {
+  padding-top: 10px;
+}
+.p-left-10px {
+  padding-left: 10px;
+}
+.p-l-r-10px {
+  padding: 0 10px;
+}
+.profile-card {
+  background-color: RGBA(255,255,255,0.4);
+}
+.bkgnd-transparent {
+  background: #11ffee00;
+}
+.logo-cart {
+  bottom: 10px;
+  left: 10px;
+}
+.logo-heart {
+  bottom: 5px;
+  right: 10px;
+}
+/* bordures */
+.border-black {
+  border: solid 1px #000;
+}
+.border-black-r-b-l {
+  border-right: solid 1px #000;
+  border-bottom: solid 1px #000;
+  border-left: solid 1px #000;
+}
+.border-l-gold {
+  border-left: solid 4px #FFD700;
+}
+/* animation page d'accueil*/
+@-webkit-keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes breathing {
+  0% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  25% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+  60% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+.icon {
+  width: 8%;
+  height: auto;
+}
+#photo_profil{
+  background-color: var(--tertiary);
+}
+#photo_profil div {
+    position: relative;
+}
+#photo_profil button{
+  position: absolute;
+  bottom: 12%;
+  right: 24%;
+}
+.underline {
+    border-bottom: 1px solid black;
+    width: 80%;
+}
+.card-body {
+  background-color: var(--tertiary);
+}
+#error img{
+  opacity: 80%;
+  transform: rotate(70deg);
+  top: -180%;
+  left: -50%;
+}
